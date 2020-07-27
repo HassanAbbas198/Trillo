@@ -11,7 +11,7 @@
 	font-size: 1.4rem;
 	height: 7rem;
 	background-color: #fff;
-	border-bottom: var(--color-grey-light-2);
+	border-bottom: 3px solid var(--color-grey-light-2);
 
 	display: flex;
 	justify-content: space-between;
@@ -39,9 +39,8 @@
 
 .hotel-view {
 	background-color: #fff;
-	background-color: red;
 
-	height: 80rem;
+	height: 60rem;
 
 	// element will grow as much as it can
 	flex: 1;
