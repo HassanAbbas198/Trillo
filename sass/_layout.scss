@@ -26,15 +26,22 @@
 .sidebar {
 	background-color: var(--color-grey-dark-1);
 
-	flex: 0 0 18%;
 	// flex-grow: 0;
 	// flex-shrink: 0;
 	// flex-basis: 18%;
+	flex: 0 0 18%;
+
+	// justify-content works on the main axis.. we changed the direction. so the main axis is vertical now
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .hotel-view {
 	background-color: #fff;
 	background-color: red;
+
+	height: 80rem;
 
 	// element will grow as much as it can
 	flex: 1;
