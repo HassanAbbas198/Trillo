@@ -16,6 +16,13 @@
 	// on the cross axis
 	align-items: center;
 
+	@media only screen and(max-width: 31.25em) {
+		order: 1;
+		flex: 0 0 100%;
+
+		background-color: var(--color-grey-light-2);
+	}
+
 	// input element doesnt inherit automatically, so we have to do it manaually
 	&__input {
 		font-family: inherit;
@@ -134,11 +141,25 @@
 	list-style: none;
 	margin-top: 3.5rem;
 
+	@media only screen and(max-width: 56.25em) {
+		display: flex;
+
+		margin: 0;
+	}
+
 	&__item {
 		position: relative;
 
 		&:not(:last-child) {
 			margin-bottom: 0.5rem;
+
+			@media only screen and(max-width: 56.25em) {
+				margin-bottom: 0;
+			}
+		}
+
+		@media only screen and(max-width: 56.25em) {
+			flex: 1;
 		}
 	}
 
@@ -167,6 +188,7 @@
 	&__item:active::before {
 		background-color: var(--color-primary-light);
 	}
+
 	&__link:link,
 	&__link:visited {
 		color: var(--color-grey-light-1);
@@ -182,6 +204,17 @@
 		// centering the elements (links and icons) vertically
 		display: flex;
 		align-items: center;
+
+		@media only screen and(max-width: 56.25em) {
+			justify-content: center;
+			padding: 2rem;
+		}
+
+		@media only screen and(max-width: 37.5em) {
+			flex-direction: column;
+
+			padding: 1.5rem 0.5rem;
+		}
 	}
 
 	&__icon {
@@ -190,6 +223,13 @@
 		margin-right: 2rem;
 		// current color is the color of the current element or the parent element
 		fill: currentColor;
+
+		@media only screen and(max-width: 37.5em) {
+			margin-right: 0;
+			margin-bottom: 0.5rem;
+			width: 1.3rem;
+			height: 1.3rem;
+		}
 	}
 }
 
@@ -200,6 +240,10 @@
 	color: var(--color-grey-light-4);
 	text-align: center;
 	padding: 2.5rem;
+
+	@media only screen and(max-width: 56.25em) {
+		display: none;
+	}
 }
 
 ///////////////////////////////////////////////////////
@@ -227,6 +271,11 @@
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		padding: 1.5rem 3rem;
+
+		@media only screen and(max-width: 37.5em) {
+			font-size: 1.8rem;
+			padding: 1.3rem 2rem;
+		}
 	}
 
 	&__stars {
@@ -266,16 +315,28 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
+		@media only screen and(max-width: 37.5em) {
+			padding: 0 1.5rem;
+		}
 	}
 
 	&__rating-average {
 		font-size: 2.25rem;
 		font-weight: 300;
 		margin-bottom: -3px;
+
+		@media only screen and(max-width: 37.5em) {
+			font-size: 1.8rem;
+		}
 	}
 
 	&__rating-count {
-		font-size: 0.8rem;
+		font-size: 1rem;
+
+		@media only screen and(max-width: 37.5em) {
+			font-size: 0.5rem;
+		}
 	}
 }
 
@@ -394,7 +455,7 @@
 		border: 3px solid #fff;
 
 		&:not(:last-child) {
-			margin-right: -1.5rem;
+			margin-right: -2rem;
 		}
 	}
 }
@@ -409,6 +470,11 @@
 
 	position: relative;
 	overflow: hidden;
+
+	@media only screen and(max-width: 56.25em) {
+		padding: 2rem;
+		margin-bottom: 3rem;
+	}
 
 	&__text {
 		margin-bottom: 2rem;
@@ -472,6 +538,10 @@
 .cta {
 	padding: 3.5rem 0;
 	text-align: center;
+
+	@media only screen and(max-width: 56.25em) {
+		padding: 2.5rem 0;
+	}
 
 	&__book-now {
 		font-size: 2rem;
